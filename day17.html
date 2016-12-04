@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+
+    </body>
+
+    <style>
+
+     html, body {
+         width: 100%;
+         height: 100%;
+
+         margin: 0;
+     }
+
+     body {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         flex-direction: row;
+
+         perspective: 1000px;
+         background: #1565c0;
+     }
+
+     .dot {
+         position: relative;
+         background: #ffffff;
+         width: 40px;
+         height: 40px;
+         border-radius: 50%;
+         margin: 8px;
+         animation-name: move;
+         animation-duration: 2s;
+         animation-iteration-count: infinite;
+         animation-timing-function: linear;
+     }
+
+     .dot:nth-child(2) {
+         animation-delay: 0.4s;
+     }
+
+     .dot:nth-child(3) {
+         animation-delay: 0.8s;
+     }
+
+     .dot:nth-child(4) {
+         animation-delay: 1.2s;
+     }
+
+     .dot:nth-child(5) {
+         animation-delay: 1.6s;
+     }
+
+     .dot:nth-child(6) {
+         animation-delay: 2s;
+     }
+
+     .dot:nth-child(7) {
+         animation-delay: 2.4s;
+     }
+
+     .dot:nth-child(8) {
+         animation-delay: 2.8s;
+     }
+
+     @keyframes move {
+         0% {
+             top: 0px;
+             box-shadow: 0px 0px 0px #ccc;
+         }
+         25% {
+             top: -150px;
+             box-shadow: 0px 15px 0px #ccc;
+         }
+         75% {
+             top: 150px;
+             box-shadow: 0px -15px 0px #ccc;
+         }
+         100% {
+             top: 0px;
+             box-shadow: 0px 5px 0px #ccc;
+         }
+     }
+
+    </style>
+</html>

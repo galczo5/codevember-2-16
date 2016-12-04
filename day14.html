@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8" />
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
+    </head>
+    <body>
+        <script src="./day14.js"></script>
+        <div class="desc">
+            Build your own sky <br />
+            <span style="font-size: 20px;">just click</span>
+        </div>
+    </body>
+
+    <style>
+     html, body {
+         width: 100%;
+         height: 100%;
+         margin: 0;
+     }
+
+     body {
+         background: radial-gradient(at bottom, #30006B , #000);
+         overflow: hidden;
+         font-family: 'Josefin Slab', serif;
+     }
+
+     .desc {
+         width: 100%;
+         padding: 25px;
+         font-size: 32px;
+         text-align: center;
+         position: fixed;
+         bottom: 0;
+
+         color: #fff;
+         opacity: 0.5;
+     }
+
+     .dot {
+         position: absolute;
+         background: yellow;
+         border-radius: 50%;
+
+         animation-delay: 1s;
+         animation-duration: 5s;
+         animation-fill-mode: forwards;
+         animation-iteration-count
+     }
+
+     @keyframes disapear-1 {
+         to {
+             width: 5px;
+             height: 5px;
+         }
+     }
+
+     @keyframes disapear-2 {
+         to {
+             width: 10px;
+             height: 10px;
+         }
+     }
+
+     @keyframes disapear-3 {
+         to {
+             width: 8px;
+             height: 8px;
+         }
+     }
+
+     @keyframes blink {
+         from {
+             opacity: 1;
+         }
+         to {
+             opacity: 0.5;
+         }
+     }
+    </style>
+</html>

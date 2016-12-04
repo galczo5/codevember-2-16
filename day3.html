@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8" />
+        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="counter" id="day-3">
+            <div class="dot"></div>
+            <a href="#">#DAY 3</a>
+        </div>
+        <div class="counter" id="day-2">
+            <div class="dot"></div>
+            <a href="https://twitter.com/galczo5/status/793901012037885956">#DAY 2</a>
+        </div>
+        <div class="counter" id="day-1">
+            <div class="dot"></div>
+            <a href="https://twitter.com/galczo5/status/793530300122931200">#DAY 1</a>
+        </div>
+        <div>
+            <p style="color: #ddd; text-align: right;">
+                THANKS FOR #CODEVEMBER!<br>
+                IT'S GREAT
+            </p>
+        </div>
+
+    </body>
+
+    <style>
+
+     @keyframes day-end {
+         0% {
+             bottom: 0px;
+             transform: rotateX(0deg);
+             opacity: 1;
+         }
+         50% {
+             opacity: 0.2s;
+         }
+         100% {
+             bottom: 1000px;
+             transform: rotateX(180deg);
+             opacity: 0;
+         }
+     }
+
+     body, html {
+         height: 100%;
+         width: 100%;
+         margin: 0;
+     }
+
+     body {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         perspective: 500px;
+     }
+
+     a {
+         text-decoration: none;
+         color: #ddd;
+     }
+
+     .counter {
+         position: relative;
+         font-family: 'Permanent Marker';
+         font-size: 104px;
+
+         background: #ffffff;
+
+         display: flex;
+         flex-shrink: 0;
+         align-items: center;
+         justify-content: center;
+         flex-direction: column;
+
+         height: 500px;
+         width: 500px;
+         border: 1px solid #eee;
+         border-radius: 4px;
+         box-shadow: 0px 0px 20px #f0f0f0;
+         animation-fill-mode: forwards;
+     }
+
+     #day-3 {
+         left: 502px;
+     }
+
+     #day-2 {
+         animation-name: day-end;
+         animation-duration: 2s;
+         animation-delay: 6s;
+     }
+
+     #day-1 {
+         left: -502px;
+         animation-name: day-end;
+         animation-duration: 2s;
+         animation-delay: 3s;
+     }
+
+     .dot {
+         width: 32px;
+         height: 32px;
+         border-radius: 16px;
+         background: #fff;
+         border: 1px solid #e0e0e0;
+         box-shadow: inset 0px 0px 10px #efefef;
+
+         position: relative;
+         bottom: 140px;
+     }
+    </style>
+
+</html>

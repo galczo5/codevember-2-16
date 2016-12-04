@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    </head>
+    <body onload="play()">
+
+        <div class="box-wrapper">
+            <div id="box-1">
+                <span>D</span>
+            </div>
+            <div id="box-2">
+                <span>A</span>
+            </div>
+        </div>
+
+        <div class="box-wrapper">
+            <div id="box-4">
+                <span>7</span>
+            </div>
+            <div id="box-3">
+                <span>Y</span>
+            </div>
+        </div>
+
+        <script src="./day7.js"></script>
+
+    </body>
+
+    <style>
+
+     @keyframes box-2-in {
+         from {
+             transform-origin: left;
+             transform: rotateY(90deg);
+         }
+         to {
+             transform-origin: left;
+             transform: rotateY(0deg);
+         }
+     }
+
+     @keyframes box-1-out {
+         from {
+             transform-origin: right;
+             transform: rotateY(0deg);
+         }
+         to {
+             transform-origin: right;
+             transform: rotateY(-90deg);
+         }
+     }
+
+     @keyframes box-3-in {
+         from {
+             transform-origin: top;
+             transform: rotateX(-90deg);
+         }
+         to {
+             transform: rotateX(0deg);
+         }
+     }
+
+     @keyframes box-2-out {
+         from {
+             transform-origin: bottom;
+             transform: rotateX(0deg);
+         }
+         to {
+             transform-origin: bottom;
+             transform: rotateX(90deg);
+         }
+     }
+
+     @keyframes box-3-out {
+         from {
+             transform-origin: left;
+             transform: rotateY(0deg);
+         }
+         to {
+             transform-origin: left;
+             transform: rotateY(90deg);
+         }
+     }
+
+     @keyframes box-4-in {
+         from {
+             transform-origin: right;
+             transform: rotateY(-90deg);
+         }
+         to {
+             transform-origin: right;
+             transform: rotateY(0deg);
+         }
+     }
+
+     @keyframes box-1-in {
+         from {
+             transform-origin: bottom;
+             transform: rotateX(90deg);
+         }
+         to {
+             transform-origin: bottom;
+             transform: rotateX(0deg);
+         }
+     }
+
+     @keyframes box-4-out {
+         from {
+             transform-origin: top;
+             transform: rotateX(0deg);
+         }
+         to {
+             transform-origin: top;
+             transform: rotateX(-90deg);
+         }
+     }
+
+     * {
+         box-sizing: border-box;
+     }
+
+     html, body {
+         width: 100%;
+         height: 100%;
+
+         margin: 0;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         flex-direction: column;
+         overflow: hidden;
+     }
+
+     body {
+         perspective: 1000px;
+     }
+
+     .box-wrapper {
+         display: flex;
+         flex-direction: row;
+     }
+
+     #box-1,
+     #box-2,
+     #box-3,
+     #box-4 {
+         width: 200px;
+         height: 200px;
+         animation-duration: 1s;
+         animation-fill-mode: forwards;
+         animation-play-state: running;
+
+         display: flex;
+         align-items: center;
+         justify-content: center;
+
+         color: #fff;
+         font-size: 160px;
+         font-family: 'Roboto Slab', serif;
+     }
+
+     #box-1 {
+         background: #dd2c00;
+     }
+
+     #box-2 {
+         background: #01579b;
+         transform-origin: left;
+         transform: rotateY(90deg);
+     }
+
+     #box-3 {
+         background: #1b5e20;
+         transform-origin: top;
+         transform: rotateX(-90deg);
+     }
+
+     #box-4 {
+         background: #212121;
+         transform-origin: right;
+         transform: rotateY(90deg);
+     }
+
+    </style>
+</html>

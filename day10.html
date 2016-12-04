@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+
+        <div class="space">
+
+            <div class="element">
+                <div class="pin"></div>
+                <div class="wire"></div>
+                <div class="ball"></div>
+            </div>
+
+            <div class="element">
+                <div class="pin"></div>
+                <div class="wire"></div>
+                <div class="ball"></div>
+            </div>
+
+            <div class="element">
+                <div class="pin"></div>
+                <div class="wire"></div>
+                <div class="ball"></div>
+            </div>
+
+            <div class="element">
+                <div class="pin"></div>
+                <div class="wire"></div>
+                <div class="ball"></div>
+            </div>
+
+            <div class="element">
+                <div class="pin"></div>
+                <div class="wire"></div>
+                <div class="ball"></div>
+            </div>
+
+            <div class="element">
+                <div class="pin"></div>
+                <div class="wire"></div>
+                <div class="ball"></div>
+            </div>
+
+        </div>
+
+    </body>
+
+    <style>
+
+     body, html {
+         width: 100%;
+         height: 100%;
+         margin: 0;
+     }
+
+     body {
+         perspective: 500px;
+         flex-direction: column;
+     }
+
+     body, .space, .element {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+     }
+
+     .space {
+         transform: rotateY(40deg);
+     }
+
+     .element {
+         flex-direction: column;
+         padding: 3px;
+         border: 1px solid #eee;
+     }
+
+     .element .pin {
+         width: 10px;
+         height: 10px;
+         background: #000;
+         border-radius: 5px;
+     }
+
+     .element .wire {
+         height: 100px;
+         background: #000;
+         width: 4px;
+     }
+
+     .element .ball {
+         width: 30px;
+         height: 30px;
+         background: #000;
+         border-radius: 15px;
+     }
+
+     .element:first-child {
+         transform: rotate(25deg);
+         animation-name: tick-left;
+         animation-duration: 4s;
+         animation-iteration-count: infinite;
+         animation-timing-function: step-start;
+     }
+
+     .element:last-child {
+         transform: rotate(-25deg);
+         animation-name: tick-right;
+         animation-duration: 4s;
+         animation-iteration-count: infinite;
+         animation-timing-function: step-start;
+     }
+
+     @keyframes tick-left {
+         0% {
+             transform-origin: top right;
+             transform: rotate(25deg);
+         }
+         25% {
+             transform-origin: top right;
+             transform: rotate(0deg);
+         }
+         75% {
+             transform-origin: top right;
+             transform: rotate(0deg);
+         }
+         100% {
+             transform-origin: top right;
+             transform: rotate(25deg);
+         }
+     }
+
+     @keyframes tick-right {
+         0% {
+             transform-origin: top left;
+             transform: rotate(0deg);
+         }
+         25% {
+             transform-origin: top left;
+             transform: rotate(0deg);
+         }
+         50% {
+             transform-origin: top left;
+             transform: rotate(-25deg);
+         }
+         75% {
+             transform-origin: top left;
+             transform: rotate(0deg);
+         }
+         100% {
+             transform-origin: top left;
+             transform: rotate(0deg);
+         }
+     }
+
+    </style>
+</html>

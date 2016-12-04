@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <div style="display: none;">
+            <img width="60", height="100" id="spaceship-image" src="./day26.svg"/>
+            <img width="60", height="100" id="spaceship-move-image" src="./day26-move.svg"/>
+        </div>
+
+        <canvas id="space"></canvas>
+        <div class="info">use arrows to navigate</div>
+        <script src="./day26.js"></script>
+    </body>
+    <style>
+     html, body {
+         width: 100%;
+         height: 100%;
+
+         background: #000;
+         margin: 0;
+         overflow: hidden;
+     }
+
+     body {
+         background: url('https://s18.postimg.org/z5s2uzmsp/space_day8.png');
+         background-size: 100%;
+     }
+
+     .info {
+         position: fixed;
+         bottom: 0;
+         padding: 20px;
+         text-align: center;
+         width: 100%;
+         color: #888;
+     }
+    </style>
+</html>
