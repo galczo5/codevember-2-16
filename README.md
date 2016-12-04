@@ -1,5 +1,4 @@
-#codevember
-
+![logo](codevember-logo.png)
 30 DAYS, 30 CREATIVE EXPERIMENTS
 
 Codevember is a challenge for developers making a creative sketch by day during the whole month of November. 
