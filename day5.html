@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+
+        <div class="circle-1">
+            <div class="circle-2">
+                <div class="circle-3">
+                    <div class="circle-4">
+                        <div class="circle-5"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+    <style>
+
+     @keyframes rotate-it {
+         from {
+             transform: rotate(0deg);
+         }
+         to {
+             transform: rotate(360deg);
+         }
+     }
+
+     @keyframes rotate-it-2 {
+         from {
+             transform: rotate(360deg);
+         }
+         to {
+             transform: rotate(0deg);
+         }
+     }
+
+     html, body {
+         height: 100%;
+         width: 100%;
+         margin: 0;
+         overflow: hidden;
+     }
+
+     body {
+         perspective: 1000px;
+     }
+
+     body,
+     .circle-1,
+     .circle-2,
+     .circle-3,
+     .circle-4,
+     .circle-5 {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+     }
+
+     .circle-1 {
+         width: 600px;
+         height: 600px;
+         background: #000000;
+         border-radius: 300px;
+         box-shadow: 0px 0px 50px #aaaaaa;
+
+         animation-name: rotate-it;
+         animation-iteration-count: infinite;
+         animation-duration: 4s;
+         animation-timing-function: linear;
+     }
+
+     .circle-2 {
+         position: relative;
+         bottom: 98px;
+         width: 400px;
+         height: 400px;
+         background: #ffffff;
+         border-radius: 200px;
+         box-shadow: inset 0px 0px 50px #aaaaaa;
+
+         animation-name: rotate-it-2;
+         animation-iteration-count: infinite;
+         animation-duration: 8s;
+         animation-timing-function: linear;
+     }
+
+     .circle-3 {
+         position: relative;
+         width: 200px;
+         height: 200px;
+         border-radius: 100px;
+         background: #000000;
+         right: 99px;
+
+         animation-name: rotate-it;
+         animation-iteration-count: infinite;
+         animation-duration: 4s;
+         animation-timing-function: linear;
+     }
+
+     .circle-4 {
+         position: relative;
+         width: 100px;
+         height: 100px;
+         border-radius: 50px;
+         background: #ffffff;
+         top: 48px;
+         box-shadow: inset 0px 0px 50px #aaaaaa;
+
+         animation-name: rotate-it-2;
+         animation-iteration-count: infinite;
+         animation-duration: 8s;
+         animation-timing-function: linear;
+     }
+
+     .circle-5 {
+         position: relative;
+         width: 50px;
+         height: 50px;
+         border-radius: 25px;
+         background: #000000;
+         left: 23px;
+
+         animation-name: rotate-it;
+         animation-iteration-count: infinite;
+         animation-duration: 4s;
+         animation-timing-function: linear;
+     }
+
+    </style>
+</html>
